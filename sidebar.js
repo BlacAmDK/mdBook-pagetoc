@@ -50,7 +50,7 @@ window.addEventListener('load', function() {
                 break;
         }
 
-        link.appendChild(document.createTextNode(el.text));
+        link.appendChild(document.createTextNode(el.parentElement.textContent));
         link.style.paddingLeft = indent;
         link.href = el.href;
         pagetoc.appendChild(link);
