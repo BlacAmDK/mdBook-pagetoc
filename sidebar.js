@@ -19,12 +19,10 @@ var updateFunction = function() {
     });
 
     Array.prototype.forEach.call(document.getElementsByClassName("pagetoc")[0].children, function(el) {
-        el.classList.remove("active");
-    });
-
-    Array.prototype.forEach.call(document.getElementsByClassName("pagetoc")[0].children, function(el) {
-        if (id.href.localeCompare(el.href) == 0) {
+        if (id?.href.localeCompare(el.href) == 0) {
             el.classList.add("active");
+        } else {
+            el.classList.remove("active");
         }
     });
 };
